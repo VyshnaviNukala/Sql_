@@ -1,0 +1,50 @@
+Question1: SELECT First_Name AS WORKER_NAME FROM Worker;
+
+
+Question2: SELECT POSITION('a' IN First_Name) FROM Worker WHERE First_Name='Amitabh';
+
+
+Question3: SELECT REPLACE(First_Name, 'a', 'A') FROM Worker;
+
+
+Question4: SELECT * FROM Worker ORDER BY First_Name ASC;
+
+
+Question5: SELECT * FROM Worker ORDER BY First_Name ASC, Department DESC;
+
+
+Question6: SELECT * FROM Worker WHERE First_Name IN ('Vipul', 'Satish');
+
+
+Question7: SELECT * FROM Worker WHERE Department='Admin';
+
+
+Question8: SELECT * FROM Worker WHERE First_Name LIKE '%a%';
+
+
+Question9: SELECT * FROM Worker WHERE Salary BETWEEN 100000 AND 500000;
+
+
+Question10: SELECT * FROM Worker WHERE First_Name LIKE '__h' AND LENGTH(First_Name) = 6;
+
+
+Question11: SELECT * FROM Worker WHERE Joining_Date BETWEEN '2014-02-01' AND '2014-02-28';
+
+
+Question12: SELECT First_Name, Last_Name, Salary FROM Worker WHERE Salary BETWEEN 50000 AND 100000;
+
+
+Question13:  SELECT s.name as Salesman, c.cust_name, c.city
+FROM Salesman s
+INNER JOIN Customer c ON s.city = c.city;
+
+
+Question14:  SELECT c.cust_name, c.city, s.name as Salesman, s.commission
+FROM Customer c
+INNER JOIN Salesman s ON c.salesman_id = s.salesman_id;
+
+
+Question15:  SELECT c.cust_name, c.city, s.name as Salesman, s.commission
+FROM Customer c
+INNER JOIN Salesman s ON c.salesman_id = s.salesman_id
+WHERE s.commission > 0.12;
